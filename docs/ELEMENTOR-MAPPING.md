@@ -166,9 +166,23 @@ Counters: Counter widget, duration 1600ms, thousands separator off for "1986".
 | About | `/about/` | `pages/About.tsx` | Page hero · intro (text + framed image) · Stats strip · Commercial / Residential focus · Advantages ledger · Timeline (bg Forest) · Team bios (`#team`) · Community · CTA |
 | Contact | `/contact/` | `pages/Contact.tsx` | Page hero + quick call/visit buttons · Project brief form · "What happens next" ledger · Map (Google Maps widget, "313 Hickory Ridge East, Thomasville, GA 31792") · FAQ |
 
-Home hero: Container min-height `calc(100vh − 114px)`, background = The Palms aerial
-(`/images/projects/the-palms/cover.jpg`), overlay as above; eyebrow with line (class `wk-eyebrow wk-eyebrow--line`);
-H1 Libre Baskerville ~96px desktop / 40px mobile; buttons gold + outline; "Now developing" callout (class `wk-now`).
+### Heroes — every page fills exactly the first screen
+All heroes (home, inner pages, every project, 404) are one screen tall below the header, on every device.
+In Elementor: hero Container → Min Height **100 vh**, then add class `wk-hero` (home) or `wk-pagehero`
+(inner pages) so the custom CSS sets `min-height: var(--hero-h)` = `100svh − header (80px / 72px on tablet
+& mobile) − top bar (34px, desktop only)`. Content is vertically centred; the stats strip sits at the bottom.
+
+- Type and spacing scale with screen width **and** height (`--fs-hero`, `--fs-h1`, `--hero-gap`, `--hero-pad` in tokens.css),
+  so headings shrink on short laptops and grow on tall tablets.
+- On short screens, secondary items hide so the hero never runs past the fold:
+  phones under 760px tall hide the "Now developing" callout; screens under 600px tall also hide the home intro text;
+  landscape phones (under 500px tall) also hide breadcrumbs, the inner-page intro text and the Contact quick links.
+  (Elementor: Advanced → Responsive can only hide by device, so keep these rules in the custom CSS.)
+- Verified on 21 viewports (320×568 → 2560×1440, incl. landscape phones and tablets) across all hero types.
+
+Home hero: background = The Palms aerial (`/images/projects/the-palms/cover.jpg`), overlay as above; eyebrow with
+line (class `wk-eyebrow wk-eyebrow--line`); H1 Libre Baskerville; buttons gold + outline (side by side on phones);
+"Now developing" callout (class `wk-now`).
 
 ### Contact / project brief form (Elementor Pro Form, or WPForms which is already installed)
 Fields: Project category (Select) · Approximate scale (Select) · Timeline goal (Radio, inline — style as

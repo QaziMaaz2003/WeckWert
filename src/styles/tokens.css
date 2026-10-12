@@ -37,8 +37,9 @@
   /* Type */
   --wk-serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
   --wk-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --fs-hero: clamp(2.5rem, min(5.6vw, 9.4vh), 6rem);
-  --fs-h1: clamp(2.25rem, 1.2rem + 3.6vw, 4.5rem);
+  --fs-hero: clamp(1.75rem, min(7vw, 6.9vh), 6.25rem);
+  --fs-h1: clamp(1.75rem, min(1.1rem + 4.4vw, 7.6vh), 4.75rem);
+  --fs-hero-text: clamp(0.95rem, min(0.86rem + 0.4vw, 2.4vh), 1.25rem);
   --fs-h2: clamp(1.9rem, 1.2rem + 2.3vw, 3.25rem);
   --fs-h3: clamp(1.3rem, 1.1rem + 0.55vw, 1.6rem);
   --fs-lead: 1.125rem;
@@ -55,10 +56,18 @@
   --radius: 2px;
   --header-h: 80px;
   --topbar-h: 34px;
+  /* Hero = first screen below the (top bar +) header; svh keeps it inside mobile browser chrome. */
+  --hero-h: calc(100vh - var(--header-h) - var(--topbar-h));
+  --hero-pad: clamp(20px, 4.5vh, 96px);
+  --hero-gap: clamp(10px, 2.3vh, 28px);
 
   /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --shadow: 0 24px 48px -28px rgba(15, 22, 17, 0.35);
+}
+
+@supports (height: 100svh) {
+  :root { --hero-h: calc(100svh - var(--header-h) - var(--topbar-h)); }
 }
 
 @media (max-width: 1024px) {
