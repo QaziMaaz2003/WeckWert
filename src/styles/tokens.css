@@ -1,0 +1,69 @@
+/*
+ * Design tokens — mirror these in Elementor → Site Settings:
+ *   Global Colors  → the --wk-* colour values below (same names)
+ *   Global Fonts   → Primary/headings: Libre Baskerville 400 · Text: Manrope 400 · Accent: Manrope 700 (eyebrows)
+ *   Layout         → Content width 1280px · Breakpoints: tablet 1024px, mobile 767px (Elementor defaults)
+ * Palette and type follow the Allerbest reference design (forest green + gold on warm ivory).
+ */
+:root {
+  /* Brand */
+  --wk-green: #003f20;        /* Primary — buttons, eyebrows, icons, CTA band */
+  --wk-green-600: #00532b;    /* Primary hover */
+  --wk-forest: #002a14;       /* Dark sections, panels */
+  --wk-charcoal: #0f1611;     /* Text headings, footer, leadership */
+  --wk-gold: #bea06a;         /* Accent — buttons on dark, eyebrows on dark */
+  --wk-gold-300: #cbb07e;     /* Accent hover */
+  --wk-gold-700: #9b7f4b;     /* Accent on light (numbers, roles) */
+
+  /* Neutrals */
+  --wk-bg: #fcfaf6;           /* Background (ivory) */
+  --wk-surface: #f4f0e7;      /* Surface (sand) */
+  --wk-muted-bg: #efebe2;
+  --wk-border: #d9d4ca;
+  --wk-ink: #0f1611;
+  --wk-text: #3c4640;
+  --wk-muted: #525e56;
+  --wk-cream: #fcfaf6;
+  --wk-white: #ffffff;
+
+  /* Context colours (flip inside dark containers, see .wk-on-dark) */
+  --heading: var(--wk-ink);
+  --body: var(--wk-muted);
+  --line: var(--wk-border);
+  --eyebrow: var(--wk-green);
+  --icon: var(--wk-green);
+  --num: var(--wk-gold-700);
+
+  /* Type */
+  --wk-serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --wk-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-hero: clamp(2.5rem, min(5.6vw, 9.4vh), 6rem);
+  --fs-h1: clamp(2.25rem, 1.2rem + 3.6vw, 4.5rem);
+  --fs-h2: clamp(1.9rem, 1.2rem + 2.3vw, 3.25rem);
+  --fs-h3: clamp(1.3rem, 1.1rem + 0.55vw, 1.6rem);
+  --fs-lead: 1.125rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-eyebrow: 0.75rem;
+
+  /* Layout */
+  --wk-container: 1280px;
+  --wk-gutter: clamp(20px, 4vw, 40px);
+  --pad-lg: clamp(72px, 9vw, 136px);
+  --pad-md: clamp(56px, 6vw, 96px);
+  --pad-sm: clamp(36px, 4vw, 56px);
+  --radius: 2px;
+  --header-h: 80px;
+  --topbar-h: 34px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow: 0 24px 48px -28px rgba(15, 22, 17, 0.35);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-h: 72px;
+    --topbar-h: 0px;
+  }
+}

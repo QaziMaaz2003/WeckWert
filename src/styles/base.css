@@ -1,0 +1,206 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+body {
+  margin: 0;
+  background: var(--wk-bg);
+  color: var(--wk-text);
+  font-family: var(--wk-sans);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body.wk-menu-open {
+  overflow: hidden;
+}
+
+img,
+svg,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--wk-serif);
+  font-weight: 400;
+  color: var(--heading);
+  letter-spacing: -0.015em;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl,
+dd {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--wk-gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--wk-gold);
+  color: var(--wk-ink);
+}
+
+.wk-container {
+  width: 100%;
+  max-width: calc(var(--wk-container) + 2 * var(--wk-gutter));
+  margin-inline: auto;
+  padding-inline: var(--wk-gutter);
+}
+
+.wk-skip {
+  position: absolute;
+  left: 12px;
+  top: -80px;
+  z-index: 200;
+  padding: 12px 18px;
+  background: var(--wk-green);
+  color: var(--wk-cream);
+  font-weight: 600;
+}
+
+.wk-skip:focus {
+  top: 12px;
+}
+
+.wk-center {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(40px, 5vw, 64px);
+}
+
+/* Dark context — every dark container flips the context colours. */
+.wk-on-dark,
+.wk-section--green,
+.wk-section--forest,
+.wk-section--charcoal,
+.wk-hero,
+.wk-pagehero,
+.wk-cta,
+.wk-footer,
+.wk-brief__panel,
+.wk-tabs__panel,
+.wk-mapcard,
+.wk-aside__panel,
+.wk-feature__panel,
+.wk-404 {
+  --heading: var(--wk-cream);
+  --body: rgba(252, 250, 246, 0.74);
+  --line: rgba(252, 250, 246, 0.14);
+  --eyebrow: var(--wk-gold);
+  --icon: var(--wk-gold);
+  --num: var(--wk-gold);
+  color: var(--body);
+}
+
+/* Scroll reveal (Elementor: Entrance Animation "Fade In Up") */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.8s var(--ease),
+    transform 0.8s var(--ease);
+}
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero entrance on load (pure CSS) */
+.wk-rise {
+  animation: wk-rise 0.9s var(--ease) both;
+}
+.wk-rise--2 { animation-delay: 0.08s; }
+.wk-rise--3 { animation-delay: 0.16s; }
+.wk-rise--4 { animation-delay: 0.24s; }
+.wk-rise--5 { animation-delay: 0.34s; }
+
+@keyframes wk-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}

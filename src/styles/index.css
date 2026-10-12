@@ -1,0 +1,7 @@
+/* Load order mirrors how the styles move to WordPress:
+   tokens → Elementor Site Settings; the rest → Site Settings › Custom CSS (or a child-theme style.css). */
+@import './tokens.css';
+@import './base.css';
+@import './layout.css';
+@import './widgets.css';
+@import './sections.css';
