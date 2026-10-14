@@ -39,5 +39,8 @@ wordpress/weckwert.css   generated stylesheet for Elementor Custom CSS
 URLs match the planned WordPress permalinks: `/residential/`, `/commercial/`, `/projects/<slug>/`,
 `/about/`, `/contact/`.
 
+**Vercel:** `vercel.json` rewrites every route to `index.html` so reloading or opening a deep link
+(e.g. `/contact`) loads the app instead of Vercel's 404. Real files (images, PDFs, JS/CSS) are still served directly.
+
 The contact form validates and shows a thank-you message but does not send email — in WordPress it is
 replaced by an Elementor Pro Form (or WPForms) with the same fields.
