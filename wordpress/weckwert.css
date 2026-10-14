@@ -1426,7 +1426,8 @@ button {
 }
 @media (max-height: 600px) {
   .wk-now,
-  .wk-hero__text { display: none; }
+  .wk-hero__text,
+  .wk-quick__item small { display: none; }
 }
 @media (max-height: 500px) {
   /* landscape phones */

@@ -15,7 +15,8 @@ site-plan PDF and campus map). The **design** follows the Allerbest reference
 3. **The Phoenix copy.** The live page has The Woodlands paragraph pasted into the middle of it. Rewritten as
    "16,200 sq ft drug treatment facility… construction began in 1999 and was completed in 2000; it currently
    serves the community as a crisis center." Confirm.
-4. **Email address.** None is published on the live site. The contact form needs a destination email in WordPress.
+4. **Contact details (updated by the client, Oct 2026):** phone **229-233-8292** (replaces 229-227-6093 from the live site) and
+   email **info@weckwertcml.com** — also the destination for the WordPress contact form.
 5. **Team bios** are as written on the live site (2025): Karl "39 years of experience" (founded 1986), Trey
    "age 29, 15 years", Erik "age 27, 15 years", Michele 37 years, Ray 45 years, Richard 27 years. Update or
    drop ages. Wording kept verbatim and worth checking: "National Home Builders Association of Thomas County

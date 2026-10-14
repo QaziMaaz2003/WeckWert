@@ -28,6 +28,13 @@ export default function Contact() {
               {brand.phone}
             </span>
           </a>
+          <a className="wk-quick__item" href={brand.emailHref}>
+            <Icon name="mail" size={20} />
+            <span>
+              <small>Email</small>
+              {brand.email}
+            </span>
+          </a>
           <a className="wk-quick__item" href={brand.mapsUrl} target="_blank" rel="noopener noreferrer">
             <Icon name="map-pin" size={20} />
             <span>
@@ -61,6 +68,10 @@ export default function Contact() {
               <li>
                 <Icon name="phone" size={18} />
                 <a href={brand.phoneHref}>{brand.phone}</a>
+              </li>
+              <li>
+                <Icon name="mail" size={18} />
+                <a href={brand.emailHref}>{brand.email}</a>
               </li>
               <li>
                 <Icon name="building" size={18} />
