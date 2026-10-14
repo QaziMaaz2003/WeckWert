@@ -97,7 +97,7 @@ filterable Loop Grid, but editing stays simple.
 
 ### Header (`wk-topbar` + `wk-header`)
 1. Container **Top bar** (class `wk-topbar`, bg Forest, height 34px, hidden on tablet/mobile):
-   Icon List (map-pin "Thomasville, Georgia" → Google Maps, phone "229-227-6093" → `tel:+12292276093`) · Text "Developer & general contractor since 1986".
+   Icon List (map-pin "Thomasville, Georgia" → Google Maps, phone "229-233-8292" → `tel:+12292338292`) · Text "Developer & general contractor since 1986".
 2. Container **Main** (class `wk-header`, bg Background, border-bottom Border, height 80px,
    *Motion Effects → Sticky: Top*): Site Logo (52px tall) · **Nav Menu** (menu "Primary", dropdown on,
    pointer underline gold) · Button "Request Proposal" → `/contact/` (class `wk-btn wk-btn--green`, hidden on tablet/mobile).
@@ -187,7 +187,7 @@ line (class `wk-eyebrow wk-eyebrow--line`); H1 Libre Baskerville; buttons gold +
 ### Contact / project brief form (Elementor Pro Form, or WPForms which is already installed)
 Fields: Project category (Select) · Approximate scale (Select) · Timeline goal (Radio, inline — style as
 chips with class `wk-chips`) · Full name* · Phone · Email* · Project details* (Textarea).
-Actions after submit: **Email** to the office address (not published on the live site — get it from the client),
+Actions after submit: **Email** to **info@weckwertcml.com**,
 optional Collect Submissions. Success message: "Thank you — your project brief has been received. We'll be in touch shortly."
 The React form only validates and shows that message; it does not send anything.
 

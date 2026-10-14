@@ -46,6 +46,13 @@ export function ProjectBrief({ id = 'brief' }: { id?: string }) {
             </div>
           </li>
           <li>
+            <Icon name="mail" size={18} />
+            <div>
+              <span>Email</span>
+              <a href={brand.emailHref}>{brand.email}</a>
+            </div>
+          </li>
+          <li>
             <Icon name="map-pin" size={18} />
             <div>
               <span>Visit</span>
