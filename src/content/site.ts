@@ -201,7 +201,7 @@ export const home = {
     eyebrow: 'Building in Thomasville since 1986',
     title: 'Turn-key construction. Four generations of building.',
     text: 'From raw land to a finished business or community, Weckwert Commercial manages development and construction from start to finish — with economies of scale typically unavailable to the end user.',
-    image: '/images/projects/the-palms/cover.jpg',
+    image: '/images/site/hero-townhomes.jpg',
     primary: { label: 'View Projects', to: '/#work' },
     secondary: { label: 'Start a Project', to: '/contact' },
     now: { label: 'Now developing', text: 'The Woodlands redevelopment, Colonial Square & The Palms townhomes in Mexico Beach' },
