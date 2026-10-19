@@ -180,7 +180,7 @@ In Elementor: hero Container → Min Height **100 vh**, then add class `wk-hero`
   (Elementor: Advanced → Responsive can only hide by device, so keep these rules in the custom CSS.)
 - Verified on 21 viewports (320×568 → 2560×1440, incl. landscape phones and tablets) across all hero types.
 
-Home hero: background = The Palms aerial cropped below the waterline (`/images/site/hero-townhomes.jpg`), overlay as above; eyebrow with
+Home hero: background = The Palms aerial (`/images/projects/the-palms/cover.jpg`), overlay as above; eyebrow with
 line (class `wk-eyebrow wk-eyebrow--line`); H1 Libre Baskerville; buttons gold + outline (side by side on phones);
 "Now developing" callout (class `wk-now`).
 
