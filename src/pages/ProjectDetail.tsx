@@ -259,7 +259,7 @@ function PlansBlock({ plans, tone }: { plans: NonNullable<Project['plans']>; ton
       <SectionHeader eyebrow="Plans & documents" title="Floor plans, plats and site plans." text="Open any drawing for a larger view; printable PDFs are provided where available." />
       <div className={`wk-plans wk-plans--${cols}`} data-widget="loop-grid">
         {plans.map((pl, i) => (
-          <article key={pl.image} className="wk-plan" data-reveal style={{ transitionDelay: `${(i % cols) * 60}ms` }}>
+          <article key={pl.image} className={`wk-plan${pl.wide ? ' wk-plan--wide' : ''}`} data-reveal style={{ transitionDelay: `${(i % cols) * 60}ms` }}>
             <button type="button" className="wk-plan__media" onClick={() => setOpen(i)} aria-label={`View ${pl.title} larger`}>
               <img src={pl.image} alt={pl.title} loading="lazy" />
             </button>

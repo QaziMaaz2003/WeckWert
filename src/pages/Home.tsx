@@ -29,8 +29,8 @@ export default function Home() {
         <SectionHeader eyebrow={home.work.eyebrow} title={home.work.title} text={home.work.text} />
         <ProjectGrid projects={featuredProjects()} filter limit={8} />
         <div className="wk-work__links" data-reveal>
-          <Button to="/residential" variant="ghost">All residential projects</Button>
           <Button to="/commercial" variant="ghost">All commercial projects</Button>
+          <Button to="/residential" variant="ghost">All residential projects</Button>
         </div>
       </Section>
 

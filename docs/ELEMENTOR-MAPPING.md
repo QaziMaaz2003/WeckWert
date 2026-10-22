@@ -103,8 +103,8 @@ filterable Loop Grid, but editing stays simple.
    pointer underline gold) · Button "Request Proposal" → `/contact/` (class `wk-btn wk-btn--green`, hidden on tablet/mobile).
 3. Nav Menu mobile: hamburger, dropdown "Full width", items in Libre Baskerville 24px.
 
-**Menu "Primary"** (Appearance → Menus), same order as the live site:
-Home · Residential (6 child items) · Commercial (9 child items) · About · Contact.
+**Menu "Primary"** (Appearance → Menus): Home · Commercial (9 child items) · Residential (6 child items) · About · Contact.
+(Commercial is listed first because it is the company's primary focus.)
 
 ### Footer (`wk-footer`, bg Charcoal)
 Grid container 5 columns (tablet 3, mobile 2): Logo + blurb · Headquarters (address, phone, directions) ·
@@ -180,7 +180,7 @@ In Elementor: hero Container → Min Height **100 vh**, then add class `wk-hero`
   (Elementor: Advanced → Responsive can only hide by device, so keep these rules in the custom CSS.)
 - Verified on 21 viewports (320×568 → 2560×1440, incl. landscape phones and tablets) across all hero types.
 
-Home hero: background = The Palms aerial (`/images/projects/the-palms/cover.jpg`), overlay as above; eyebrow with
+Home hero: background = the client's commercial project photo (Starbucks / strip-center building, `/images/site/hero-commercial.jpg`), overlay as above; eyebrow with
 line (class `wk-eyebrow wk-eyebrow--line`); H1 Libre Baskerville; buttons gold + outline (side by side on phones);
 "Now developing" callout (class `wk-now`).
 

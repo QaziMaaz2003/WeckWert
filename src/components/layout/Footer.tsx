@@ -45,10 +45,10 @@ export function Footer() {
 
           <div>
             <h2 className="wk-footer__title">
-              <Link to="/residential">Residential</Link>
+              <Link to="/commercial">Commercial</Link>
             </h2>
-            <ul className="wk-footer__links">
-              {residential.map((l) => (
+            <ul className="wk-footer__links wk-footer__links--2col">
+              {commercial.map((l) => (
                 <li key={l.to}>
                   <Link to={l.to}>{l.label}</Link>
                 </li>
@@ -58,10 +58,10 @@ export function Footer() {
 
           <div>
             <h2 className="wk-footer__title">
-              <Link to="/commercial">Commercial</Link>
+              <Link to="/residential">Residential</Link>
             </h2>
-            <ul className="wk-footer__links wk-footer__links--2col">
-              {commercial.map((l) => (
+            <ul className="wk-footer__links">
+              {residential.map((l) => (
                 <li key={l.to}>
                   <Link to={l.to}>{l.label}</Link>
                 </li>

@@ -494,7 +494,7 @@ export const projects: Project[] = [
       { src: img('the-woodlands', 'auditorium.jpg'), alt: 'Auditorium seating at The Woodlands' },
     ],
     plans: [
-      { title: 'Campus directory map', image: img('the-woodlands', 'campus-map.jpg') },
+      { title: 'Campus directory map', caption: 'Weckwert Commercial Division: 301–313 Hickory Ridge East', image: img('the-woodlands', 'campus-map.png'), wide: true },
       { title: 'Overall site plan', caption: '400 S. Pinetree Blvd.', image: img('the-woodlands', 'site-plan.jpg'), pdf: pdf('the-woodlands', 'overall-site-plan.pdf') },
     ],
   },

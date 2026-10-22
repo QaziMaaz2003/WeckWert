@@ -22,6 +22,8 @@ export interface Fact {
 /** A floor plan, plat or site plan. `pdf` = printable original from the live site. */
 export interface PlanDoc {
   title: string;
+  /** Very wide drawing (e.g. campus map): spans the full row instead of one grid cell. */
+  wide?: boolean;
   caption?: string;
   image: string;
   pdf?: string;

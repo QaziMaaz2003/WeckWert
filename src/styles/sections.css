@@ -1058,6 +1058,10 @@
   object-fit: contain;
   transition: transform 0.6s var(--ease);
 }
+/* very wide drawings (campus map) span the whole row so the labels stay readable */
+.wk-plan--wide { grid-column: 1 / -1; }
+.wk-plan--wide .wk-plan__media { aspect-ratio: 8 / 3; padding: 0; background: #3f2b1d; }
+.wk-plan--wide .wk-plan__media:hover img { transform: none; }
 .wk-plan__media:hover img { transform: scale(1.03); }
 .wk-plan__body {
   padding: 20px 22px 22px;
