@@ -33,8 +33,8 @@ const projectLinks = (type: 'residential' | 'commercial') =>
 // WordPress: Appearance → Menus "Primary" (same pages and order as the live site).
 export const nav: NavLink[] = [
   { label: 'Home', to: '/' },
-  { label: 'Residential', to: '/residential', children: projectLinks('residential') },
   { label: 'Commercial', to: '/commercial', children: projectLinks('commercial') },
+  { label: 'Residential', to: '/residential', children: projectLinks('residential') },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
 ];
@@ -201,7 +201,7 @@ export const home = {
     eyebrow: 'Building in Thomasville since 1986',
     title: 'Turn-key construction. Four generations of building.',
     text: 'From raw land to a finished business or community, Weckwert Commercial manages development and construction from start to finish — with economies of scale typically unavailable to the end user.',
-    image: '/images/projects/the-palms/cover.jpg',
+    image: '/images/site/hero-commercial.jpg',
     primary: { label: 'View Projects', to: '/#work' },
     secondary: { label: 'Start a Project', to: '/contact' },
     now: { label: 'Now developing', text: 'The Woodlands redevelopment, Colonial Square & The Palms townhomes in Mexico Beach' },

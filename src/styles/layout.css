@@ -304,7 +304,7 @@
 }
 .wk-footer__grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.35fr 0.75fr;
+  grid-template-columns: 1.5fr 1fr 1.35fr 1fr 0.75fr;  /* brand · HQ · Commercial · Residential · Company */
   gap: 40px;
 }
 .wk-footer__brand img {
@@ -373,5 +373,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 36px 24px;
   }
-  .wk-footer__grid > div:nth-child(4) { grid-column: 1 / -1; }
+  /* DOM order is brand, HQ, Commercial, Residential, Company: keep HQ + Residential paired, Commercial full width */
+  .wk-footer__grid > div:nth-child(3) { grid-column: 1 / -1; order: 4; }
+  .wk-footer__grid > div:nth-child(5) { order: 5; }
 }
