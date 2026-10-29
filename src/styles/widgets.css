@@ -253,6 +253,12 @@
 }
 .wk-gallery--2 { grid-template-columns: repeat(2, 1fr); }
 .wk-gallery--4 { grid-template-columns: repeat(4, 1fr); }
+/* 3-column grid with 2 photos left over: the last two share the final row (6-column grid, 2 + 3 + 3 spans) */
+@media (min-width: 768px) {
+  .wk-gallery--last2 { grid-template-columns: repeat(6, 1fr); }
+  .wk-gallery--last2 .wk-gallery__item { grid-column: span 2; }
+  .wk-gallery--last2 .wk-gallery__item:nth-last-child(-n + 2) { grid-column: span 3; }
+}
 .wk-gallery__btn {
   position: relative;
   display: block;
@@ -304,6 +310,8 @@
   .wk-gallery,
   .wk-gallery--4 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .wk-gallery--contain { grid-template-columns: 1fr; }
+  /* odd photo count: the last photo takes the full row instead of leaving a gap */
+  .wk-gallery:not(.wk-gallery--contain) .wk-gallery__item:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 .wk-lightbox {

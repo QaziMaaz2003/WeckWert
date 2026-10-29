@@ -247,6 +247,37 @@
   .wk-hero__actions { grid-template-columns: 1fr; }
 }
 
+/* Home hero photo placement — keeps the Starbucks sign clear of the headline.
+ * Desktop: photo fills the right ~70% and fades into the green on the left.
+ * Tablet / tall phone: photo zoomed to the top of the hero, text sits below it.
+ * Small, short phones keep the plain full-bleed photo. Only the home hero (.wk-hero) uses this.
+ * Elementor: Container background image → Position "Center Right", plus the gradient overlay below. */
+@media (min-width: 1025px) {
+  .wk-hero .wk-hero__bg {
+    left: 30%;
+    width: 70%;
+    object-position: 30% 50%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 30%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 30%);
+  }
+  .wk-hero .wk-hero__shade {
+    background:
+      linear-gradient(90deg, rgba(0, 42, 20, 0.92) 0%, rgba(0, 42, 20, 0.82) 38%, rgba(0, 42, 20, 0.35) 56%, rgba(0, 42, 20, 0.08) 72%, rgba(0, 42, 20, 0) 100%),
+      linear-gradient(0deg, rgba(0, 42, 20, 0.45) 0%, rgba(0, 42, 20, 0) 35%);
+  }
+}
+@media (max-width: 1024px) and (min-height: 650px) {
+  .wk-hero .wk-hero__bg {
+    top: -40%;
+    height: 125%;
+    object-position: 26% 50%;
+  }
+  .wk-hero .wk-hero__shade {
+    background: linear-gradient(0deg, rgba(0, 42, 20, 0.97) 0%, rgba(0, 42, 20, 0.94) 50%, rgba(0, 42, 20, 0.6) 64%, rgba(0, 42, 20, 0.08) 78%, rgba(0, 42, 20, 0) 100%);
+  }
+  .wk-hero__inner { justify-content: flex-end; }
+}
+
 /* Short screens: secondary hero items step back so the hero still fits one screen. */
 @media (max-width: 767px) and (max-height: 760px) {
   .wk-now { display: none; }

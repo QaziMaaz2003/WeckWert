@@ -180,7 +180,11 @@ In Elementor: hero Container → Min Height **100 vh**, then add class `wk-hero`
   (Elementor: Advanced → Responsive can only hide by device, so keep these rules in the custom CSS.)
 - Verified on 21 viewports (320×568 → 2560×1440, incl. landscape phones and tablets) across all hero types.
 
-Home hero: background = the client's commercial project photo (Starbucks / strip-center building, `/images/site/hero-commercial.jpg`), overlay as above; eyebrow with
+Home hero: background = the client's commercial project photo (Starbucks / strip-center building, `/images/site/hero-commercial.jpg`).
+Photo placement keeps the Starbucks sign clear of the headline: on desktop the photo fills the **right 70%** and fades into the green on the
+left (Elementor: Container background image → Position *Center Right*, size *Cover*, plus an overlay gradient green→transparent left→right);
+on tablets and tall phones the photo is zoomed to the **top** of the hero with the text below it (overlay gradient bottom→top);
+on very small phones it stays full-bleed. See the `Home hero photo placement` block in `src/styles/sections.css`. Overlay as above; eyebrow with
 line (class `wk-eyebrow wk-eyebrow--line`); H1 Libre Baskerville; buttons gold + outline (side by side on phones);
 "Now developing" callout (class `wk-now`).
 
