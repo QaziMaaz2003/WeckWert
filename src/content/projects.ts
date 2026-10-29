@@ -492,6 +492,7 @@ export const projects: Project[] = [
       { src: img('the-woodlands', 'atrium.jpg'), alt: 'Interior atrium with planters at The Woodlands' },
       { src: img('the-woodlands', 'atrium-2.jpg'), alt: 'Atrium balcony and lobby at The Woodlands' },
       { src: img('the-woodlands', 'auditorium.jpg'), alt: 'Auditorium seating at The Woodlands' },
+      { src: img('the-woodlands', 'fountain.jpg'), alt: 'Tiered fountain with a brick basin on the lawn in front of the campus buildings at The Woodlands' },
     ],
     plans: [
       { title: 'Campus directory map', caption: 'Weckwert Commercial Division: 301–313 Hickory Ridge East', image: img('the-woodlands', 'campus-map.png'), wide: true },
