@@ -488,7 +488,6 @@ export const projects: Project[] = [
     coverAlt: 'Fountain on the lawn in front of The Woodlands of Thomas County',
     brandLogo: { src: img('the-woodlands', 'logo.jpg'), alt: 'The Woodlands of Thomas County logo' },
     gallery: [
-      { src: img('the-woodlands', 'cover.jpg'), alt: 'Fountain on the lawn at The Woodlands' },
       { src: img('the-woodlands', 'atrium.jpg'), alt: 'Interior atrium with planters at The Woodlands' },
       { src: img('the-woodlands', 'atrium-2.jpg'), alt: 'Atrium balcony and lobby at The Woodlands' },
       { src: img('the-woodlands', 'auditorium.jpg'), alt: 'Auditorium seating at The Woodlands' },
